@@ -16,20 +16,24 @@ void merge(int arr[],int left,int mid,int right)
         {  
             arr[k]=L[i]; i++;
         } 
+
         else
         {
              arr[k]=R[j]; j++;  
         }  
+
         k++;  
     }  
     while(i<n1)
     {
         arr[k]=L[i]; i++; k++;  
     }  
+
     while(j<n2)  
     {  
         arr[k]=R[j]; j++; k++;  
     }  
+
 }  
 void mergesort(int arr[],int left,int right)  
 {  
@@ -39,7 +43,8 @@ void mergesort(int arr[],int left,int right)
         mergesort(arr,left,mid);
         mergesort(arr,mid+1,right);
         merge(arr,left,mid,right);  
-    }  
+    } 
+
 }  
 void printArray(int arr[],int size)  
 {  
@@ -48,6 +53,7 @@ void printArray(int arr[],int size)
     printf("%d\t",arr[i]);
     printf("\n");  
 }  
+
 int main()  
 {  
     int arr[]={12,11,13,5,6,7};
