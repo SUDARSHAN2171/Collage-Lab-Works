@@ -23,7 +23,9 @@ int optimalMerge(int arr[], int n) {
 
         n--;
     }
+    
     return cost;
+
 }
 
 int main() {
