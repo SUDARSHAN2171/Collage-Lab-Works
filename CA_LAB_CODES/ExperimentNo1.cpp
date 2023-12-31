@@ -16,6 +16,7 @@ int main()
     for(i=0;i<10000;i++)
     {
     }
+    
     low=0;high=n-1;
     mid=(low+high)/2;
     while(low<=high)
@@ -27,12 +28,15 @@ int main()
             printf("%d found at location %d\n",key,mid+1);
             break;
         }
+
         else
         high=mid+1;
         mid=(low+high)/2;
     }
+
     if(low>high)
     printf("not found! %d isn't present in the list.n",key);
+
     time(&t2);
     printf("The difference between the time is %2f\n",difftime(t2 , t1));
     return 0;
