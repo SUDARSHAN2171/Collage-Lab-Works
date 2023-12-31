@@ -18,22 +18,27 @@ int main() {
         printf("Job %d: ", i+1);
         scanf("%d %d %d", &arr[i].id, &arr[i].deadline, &arr[i].profit);
     }
+
     jobSequencing(arr, n);
     return 0;
+
 }
 
 void jobSequencing(Job arr[], int n) {
     int i, j;
     int max_deadline = 0;
+
     for(i = 0; i < n; i++) {
         if(arr[i].deadline > max_deadline) {
             max_deadline = arr[i].deadline;
         }
     }
+
     int result[max_deadline];
     for(i = 0; i < max_deadline; i++) {
         result[i] = -1;
     }
+
     int totalProfit = 0;
     for(i = 0; i < n; i++) {
         for(j = arr[i].deadline - 1; j >= 0; j--) {
@@ -44,6 +49,7 @@ void jobSequencing(Job arr[], int n) {
             }
         }
     }
+    
     printf("The sequence of jobs with maximum profit is: ");
     for(i = 0; i < max_deadline; i++) {
         if(result[i] != -1) {
