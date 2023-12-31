@@ -8,6 +8,7 @@ void maxmin(int i, int j)
   	{  
         max = min = a[i];  
     } 
+
     else   
   	{  
         if (i == j - 1)   
@@ -23,6 +24,7 @@ void maxmin(int i, int j)
                 min= a[j];  
             }  
         } 
+
         else   
   	  	{  
             mid = (i + j) / 2;
@@ -35,6 +37,7 @@ void maxmin(int i, int j)
         if(min > min1)
         min = min1;  
         }  
+        
     }  
 }  
   
