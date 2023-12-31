@@ -15,6 +15,7 @@ int partition(int a[], int low, int high)
             a[j] = temp;  
         }  
     }  
+    
     int temp = a[i + 1];
     a[i + 1] = a[high];     
     a[high] = temp;  
