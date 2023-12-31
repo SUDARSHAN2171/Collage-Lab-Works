@@ -28,13 +28,16 @@ void simple_fill() {
         used[maxi] = 1; /* mark the maxi-th object as used */
         cur_w -= c[maxi]; /* with the object in the bag, I can carry less */
         tot_v += v[maxi];
+
         if (cur_w >= 0)
             printf("Added object %d (%dRs, %dKg) completely in the bag. Space left: %d.\n", maxi + 1, v[maxi], c[maxi], cur_w);
+            
         else {
             printf("Added %d%% (%dRs, %dKg) of object %d in the bag.\n", (int)((1 + (float)cur_w/c[maxi]) * 100), v[maxi], c[maxi], maxi + 1);
             tot_v -= v[maxi];
             tot_v += (1 + (float)cur_w/c[maxi]) * v[maxi];
         }
+
     }
  
     printf("Filled the bag with objects worth %.2fRs.\n", tot_v);
