@@ -3,6 +3,7 @@ using namespace std;
 void Xtest(int test)
 {
     cout<<"Inside Xtest, test is : "<< test << "\n";
+    
     if(test)
         throw test;
 }
@@ -21,7 +22,7 @@ int main()
         cout << "Caught an  exception -- value is : ";
         cout << i <<"\n";
     }
-    
+
     cout << "End\n";
     return 0;
 }
