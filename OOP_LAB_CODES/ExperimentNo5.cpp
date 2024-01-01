@@ -13,7 +13,6 @@ public:
     }
     void push(int val) 
 	{
-        
         data[++topIndex] = val;
     }
     void pop() 
@@ -29,6 +28,7 @@ public:
         }
         cout << endl;
     }
+
 };
 class Queue {
 private:
