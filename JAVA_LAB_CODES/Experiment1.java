@@ -13,19 +13,22 @@ public class Experiment1 {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             month_days[2] = 29;
         }
+
         if ((month < 1) || (month > 12)) {
             System.out.println("Invalid date : Month must be in between 1 to 12");
             return;
         }
+
         if ((date < 1) || (date > month_days[month])) {
             System.out.println("Invalid date :Month days should be according to month ");
             return;
         }
+
         int passed_days = date;
         for (int i = 1; i < month; i++) {
             passed_days += month_days[i];
-
         }
+
         int total_days = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400 + passed_days;
         int t_odddays = total_days % 7;
         System.out.println("the odd days are " + t_odddays);
