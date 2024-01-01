@@ -29,6 +29,7 @@ class Role
         RoleId=a;
     }
 };
+
 class derived : public Person ,public Role{
     public : 
     void show() {
@@ -37,6 +38,7 @@ class derived : public Person ,public Role{
         
     }
 };
+
 int main()
 {
     derived obj ;
