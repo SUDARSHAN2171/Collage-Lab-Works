@@ -7,6 +7,7 @@ class shapes{
     int side;
     int area();
 };
+
 int area(int side)
     {
         return side*side;
