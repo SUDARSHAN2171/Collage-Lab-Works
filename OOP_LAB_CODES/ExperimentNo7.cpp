@@ -28,10 +28,12 @@ void complex :: operator ++()
     ++a;
     ++b;
 }
+
 void complex :: operator ++(int)
 {
 a++; b++;
 }
+
 complex complex :: operator+(complex ob)
 {
 complex t;
