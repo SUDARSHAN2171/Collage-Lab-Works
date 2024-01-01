@@ -27,16 +27,19 @@ public class Experiment4 {
         public void calculateMonthlyInterest() {
             double monthlyInterest = (savingsBalance * annualInterestRate) / 12;
             savingsBalance += monthlyInterest;
+
         }
 
         // Method to get the current savings balance
         public double getSavingsBalance() {
             return savingsBalance;
+
         }
 
         // Static method to get the current annual interest rate
         public static double getAnnualInterestRate() {
             return annualInterestRate;
+
         }
     }
 
