@@ -8,6 +8,7 @@ class Date
     int month;
     int year;
 public:
+
     Date() 
 	{
         day = 1;
@@ -39,6 +40,7 @@ public:
     Date difference(Date& date1, Date& date2);
     void incrementDate(int days, int months);
 };
+
 Date Date::difference(Date& date1, Date& date2) 
 {
     Date cal;
@@ -66,6 +68,7 @@ Date Date::difference(Date& date1, Date& date2)
     cal.year = date2.year - date1.year;
     return cal;
 }
+
 void Date::incrementDate(int days, int months) 
 {
     day += days;
@@ -88,6 +91,7 @@ void Date::incrementDate(int days, int months)
         }
     }
 }
+
 int main() 
 {
     Date date1, date2, calculate;
@@ -101,7 +105,6 @@ int main()
     calculate.incrementDate(1, 1);
     cout << "\n After incrementing of day and month ";
     calculate.finalDate();
-
     
     return 0;
 }
