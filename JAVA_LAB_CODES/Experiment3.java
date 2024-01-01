@@ -30,6 +30,7 @@ class Experiment3 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter employee ID : ");
         int a = sc.nextInt();
+
         switch (a) {
             case 101:
                 ab.setdata(101, "Sakshi", "Ichalkaranji", 10000);
