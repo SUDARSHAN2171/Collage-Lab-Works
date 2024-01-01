@@ -6,6 +6,7 @@ public class ExperimentNo5B {
         SportsCar sportsCar = new SportsCar();
         sportsCar.start();
         sportsCar.drive();
+
     }
 }
 
@@ -25,6 +26,7 @@ class SportsCar extends Vehicle {
         System.out.println("Sports car is driving fast!");
     }
 }
+
 // create 4 class shape with method get area that returns the area create
 // subclass rectangle that extends shape & add field length & breaks & override
 // method getarea that returns area
