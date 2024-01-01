@@ -39,6 +39,7 @@ public:
         }
         head = NULL;
     }
+    
     void displayProducts() 
 	
 	{
