@@ -11,6 +11,7 @@ class student
     int getinfo1();
     char getinfo2();
 };
+
 void student ::  setdate(void)
 {
     int a;
@@ -25,7 +26,7 @@ void student ::  setdate(void)
  int student :: getinfo1()
 {
      return rollno;
- }
+}
 
 char student :: getinfo2()
 {
@@ -38,6 +39,7 @@ class marks : public student
     int inputMarks();
     void display();
 };
+
 int marks :: inputMarks()
 {
     cout<<"Enter Marks in Subject 1 : ";
@@ -56,6 +58,7 @@ void marks :: display()
     cout<<"Subject 3 : "<<m3<<endl;  
 
 }
+
 int main()
 {
     marks d;
