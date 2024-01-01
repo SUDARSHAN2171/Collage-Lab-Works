@@ -18,6 +18,7 @@ int main()
             float result = (float)number1/number2;
             cout<<"Division of given numbers : "<<result<<endl; 
         }
+        
     }
     catch(int i)
     {
