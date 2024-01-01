@@ -99,6 +99,7 @@ int main()
     date1.putDate();
     date2.getDate();
     date2.putDate();
+    
     calculate = date1.difference(date1, date2);
     calculate.finalDate();
 
