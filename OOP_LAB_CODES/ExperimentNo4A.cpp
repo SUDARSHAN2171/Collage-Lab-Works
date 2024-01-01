@@ -17,6 +17,7 @@ void displayProducts(Product productList[], int n)
         cout << productList[i].productId << "\t" << productList[i].productName << "\t" << productList[i].productPrice << endl;
     }
     cout << endl;
+    
 }
 
 void insertProduct(Product productList[], int &n, int pos, Product newProduct) 
