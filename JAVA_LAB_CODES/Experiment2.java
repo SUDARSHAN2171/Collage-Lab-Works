@@ -80,6 +80,7 @@ public class Experiment2 {
             for (int j = 0; j < c2; j++) {
                 for (int k = 0; k < c1; k++) {
                     result[i][j] += mat1[i][k] * mat2[k][j];
+
                 }
             }
         }
@@ -91,6 +92,7 @@ public class Experiment2 {
             for (int elem : row) {
                 System.out.print(elem + " ");
             }
+
             System.out.println();
         }
     }
