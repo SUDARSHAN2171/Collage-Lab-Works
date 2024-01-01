@@ -13,6 +13,7 @@ private:
     float productprice;
 
 public:
+
     Product(int id, string name, int stock, float gst, float discount, float price) 
 	{
         this->prod_id = id;
