@@ -57,6 +57,7 @@ void main()
     printf("%d \t",p[i][j]);
     printf("\n");
     }
+    
     printf("\n The shortest paths are:\n");
 
     for(i=1;i<=n;i++)
