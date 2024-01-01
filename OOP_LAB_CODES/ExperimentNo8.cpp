@@ -79,6 +79,7 @@ class matrix
         void inputMatrix()
         {
             cout << "Enter elements of the matrix:" << endl;
+            
             for (int i = 0; i < rows; ++i)
             {
                 for (int j = 0; j < cols; ++j)
@@ -94,6 +95,7 @@ int main()
     int rows, cols;
     cout << "Enter the number of rows for matrices: ";
     cin >> rows;
+
     cout << "Enter the number of columns for matrices: ";
     cin >> cols;
 
