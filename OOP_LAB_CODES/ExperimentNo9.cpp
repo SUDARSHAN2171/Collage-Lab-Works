@@ -11,7 +11,6 @@ private:
     float gst;
     float discount;
     float productprice;
-
 public:
 
     Product(int id, string name, int stock, float gst, float discount, float price) 
