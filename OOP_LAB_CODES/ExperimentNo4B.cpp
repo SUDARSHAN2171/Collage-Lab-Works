@@ -23,7 +23,6 @@ private:
     Node* head;
 
 public:
-
     ProductList() 
 	{
         head = NULL; 

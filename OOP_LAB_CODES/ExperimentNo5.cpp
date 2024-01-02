@@ -5,7 +5,6 @@ private:
     static const int MAX_SIZE = 100;
     int data[MAX_SIZE];
     int topIndex;
-
 public:
     Stack() 
 	{

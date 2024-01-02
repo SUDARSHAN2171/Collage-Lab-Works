@@ -16,7 +16,6 @@ class circle{
        this->y1=y1;
        this->y2=y2;
     }
-    
     void show()
     {
        slope = (y2-y1)/(x2-x1);

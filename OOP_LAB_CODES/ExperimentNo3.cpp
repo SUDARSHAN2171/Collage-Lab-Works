@@ -91,7 +91,6 @@ void Date::incrementDate(int days, int months)
         }
     }
 }
-
 int main() 
 {
     Date date1, date2, calculate;
@@ -99,7 +98,7 @@ int main()
     date1.putDate();
     date2.getDate();
     date2.putDate();
-    
+
     calculate = date1.difference(date1, date2);
     calculate.finalDate();
 
