@@ -15,7 +15,6 @@ print(marks[1:3])
 print(marks[-4:-1])
 print(marks[-5:len(marks)])
 print(marks[:4])
-
 #methods in list
 number=[2,1,3]
 print(number)
