@@ -1,7 +1,6 @@
 #if-elif-else
 
 age1 = 18
-
 if (age1 < 18):
     print("You are under 18 years old.")
 #elif is only checked if "if Statement is false"
