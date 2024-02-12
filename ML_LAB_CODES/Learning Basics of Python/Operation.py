@@ -32,6 +32,7 @@ if(a!=c):    #this is the way to use relation operator "!="
 
 if(a<c):     #this is the way to use relation operator "<,>,<=,>="
     print("The condition is true")
+
     
 #ways to use assignment operators
 a==b
