@@ -21,6 +21,7 @@ f=open("file_name","mode")
  f.close()
 '''
 
+
  #if the file is present somewhere out the folder need to the entire path 
 f = open("ML_LAB_CODES\Learning Python\demo.txt", "r")
 data = f.read()
