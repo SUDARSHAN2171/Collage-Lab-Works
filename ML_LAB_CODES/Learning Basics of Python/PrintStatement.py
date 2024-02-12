@@ -13,6 +13,7 @@ print(type(age))
 name = 'Sudarshan'
 print(type(name))
 bol = True
+
 print(type(bol))
 fraction = 98.9
 print(type(fraction))
