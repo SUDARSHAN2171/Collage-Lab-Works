@@ -9,7 +9,6 @@ print(set2)
 #set when printed always return same answer in different order and will not repeat the number or world which you used more then one time 
 print(len(set2)) #even len will ignore dublicates
 
-
 info={}
 subj=int(input("Enter Mark for Physics : "))
 info.update({"Physic" : subj})
