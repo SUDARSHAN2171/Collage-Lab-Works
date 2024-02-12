@@ -11,6 +11,7 @@ else:
 copy2=list2.copy()
 copy2.reverse()
 print(copy2)
+
 if(copy2==list2):
     print("Palindrome")
 else:
