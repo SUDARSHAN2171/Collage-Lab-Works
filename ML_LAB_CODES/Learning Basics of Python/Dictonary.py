@@ -7,6 +7,7 @@ dict={
     "subjects":["pthon","c++","java"],
     "topic":("inheritance","overriding")
 }
+
 print(type(dict))
 print(dict)
 print(dict["city"])
