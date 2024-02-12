@@ -16,7 +16,6 @@ cal_sum (a,b)
 def print_hello():
     print("Hello World")
 #Calling the function
-
 print_hello()
 print_hello()
 print_hello()
