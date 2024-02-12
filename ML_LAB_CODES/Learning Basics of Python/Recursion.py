@@ -16,7 +16,6 @@ fact=int(input("Enter the number for factorial : "))
 ans=factorial(fact)
 print("Factorial of ",fact," : ",ans)
 
-
 #WARF to calculate the sum of first n natural numbers
 def sum_of_natural_numbers(n):
     if(n==1):
