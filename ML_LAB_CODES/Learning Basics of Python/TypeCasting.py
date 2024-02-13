@@ -10,6 +10,7 @@ print(a+b)
 #similarlly 
 a=float("7")
 b=2.1
+
 print(type(a))
 print(a+b)
 
