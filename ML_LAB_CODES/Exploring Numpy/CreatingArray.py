@@ -14,6 +14,7 @@ print(type(array2))
 array3=np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
 print(array3)
 print(type(array3))
+
 #check number of Dimensions
 print("Number of Dimensions in array1 : ",array1.ndim)
 print("Number of Dimensions in array2 : ",array2.ndim)
