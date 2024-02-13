@@ -45,6 +45,7 @@ array6 = np.array([1.1,2.2,3.3,4.4,5.5])
 uparray6 = array6.astype(int)
 print(uparray6)
 print(uparray6.dtype)
+
 #change the data type from integer to a boolean
 array7 = np.array([1,2,3,4,5,0])
 ubarray7 = array7.astype(bool)
