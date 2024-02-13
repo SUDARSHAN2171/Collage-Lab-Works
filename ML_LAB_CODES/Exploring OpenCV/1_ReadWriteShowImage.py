@@ -6,6 +6,7 @@ import cv2
 img=cv2.imread("ExampleForRWS.jpg",1)
 print(img)#this will print the image in the form of pixels
 
+
 #show image
 cv2.imshow('ExampleForRWS.jpg',img) #using this imshow the image will be visible for few millesecond but not properly visiable
 
