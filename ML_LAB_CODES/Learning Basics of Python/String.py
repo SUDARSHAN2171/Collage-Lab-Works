@@ -10,6 +10,7 @@ print(str3)
 print(str4)
 print(str1+" "+str2)
 #function in string 
+
 print(len(str1))
 print(str2.endswith("string")) #this returns true if the str2 ends with "string"
 print(str2)
