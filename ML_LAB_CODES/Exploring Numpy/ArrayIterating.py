@@ -41,6 +41,7 @@ for x in array4:
 array5=np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 for x in np.nditer(array5):         #that is it skips the loop in loop
     print(x)
+    
 #enumerated iteration using  ndenumerate()
 #enumeration means mentioning sequence number of somethings one by one 
 #enumerate on the following 1-D array
