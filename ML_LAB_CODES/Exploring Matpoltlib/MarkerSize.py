@@ -27,7 +27,6 @@ plt.show()
 #Example : Set the color of both the edge and the face to red:
 plt.plot(yaxis, marker = 'o', ms = 20, mec = 'r', mfc = 'r')
 plt.show()
-
 #You can also use Hexadecimal color values:
 #Example Mark each point with a beautiful green color:
 plt.plot(yaxis, marker = 'o', ms = 20, mec = '#4CAF50', mfc = '#4CAF50')
