@@ -55,7 +55,6 @@ plt.show()
 '''
 you can plt as many lines as you like by simply adding more plt.plot() function
 '''
-
 yaxis1=np.array([7,2,9,1,5])
 yaxis2=np.array([3,1,9,2,5])
 plt.plot(yaxis1)
