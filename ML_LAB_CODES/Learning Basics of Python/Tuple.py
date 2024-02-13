@@ -14,6 +14,7 @@ print(tup3)
 #scaling in tuple
 print(tup[3:len(tup)])
 
+
 #methods in tuple
 print(tup.index(95)) #returns the first index of the value
 print(tup.count(95)) #returns the count of the value in tuple
