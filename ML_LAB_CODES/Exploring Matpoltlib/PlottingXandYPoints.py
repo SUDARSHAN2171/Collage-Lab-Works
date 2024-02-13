@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #plotting x and y points
-
 #the plot() function is used to draw points(markers) in a diagram
 #by default the plot function draw a line from point to point 
 #draw a line in a diagram fromm position (1,3) to position (8,10)
