@@ -3,7 +3,6 @@ using namespace std;
 void Xtest(int test)
 {
     cout<<"Inside Xtest, test is : "<< test << "\n";
-
     if(test)
         throw test;
 }
