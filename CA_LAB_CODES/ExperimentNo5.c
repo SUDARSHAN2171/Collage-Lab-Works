@@ -15,7 +15,6 @@ void simple_fill() {
  
     for (i = 0; i < n; ++i)
         used[i] = 0; /* I have not used the ith object yet */
- 
     cur_w = W;
     while (cur_w > 0) { /* while there's still room*/
         /* Find the best object */
