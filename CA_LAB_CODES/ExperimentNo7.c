@@ -14,7 +14,6 @@ int optimalMerge(int arr[], int n) {
             else if (arr[i] < arr[smallest2])
                 smallest2 = i;
         }
-
         cost += arr[smallest1] + arr[smallest2];
         arr[smallest1] += arr[smallest2];
 
