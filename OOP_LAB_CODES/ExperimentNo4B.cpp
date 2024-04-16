@@ -21,7 +21,6 @@ public:
 class ProductList {
 private:
     Node* head;
-
 public:
     ProductList() 
 	{
