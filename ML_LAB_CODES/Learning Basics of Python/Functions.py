@@ -13,7 +13,6 @@ b=10
 #Calling the function
 cal_sum (a,b)
 
-
 def print_hello():
     print("Hello World")
 #Calling the function
