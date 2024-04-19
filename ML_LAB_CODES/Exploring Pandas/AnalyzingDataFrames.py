@@ -7,15 +7,12 @@ import pandas as pd
 data=pd.read_csv('data.csv')
 print(data.head(10)) #this will help to read the first 10 columns
 print("\n")
-
 #first 5 rows of dataframe
 print(data.head())
 print("\n")
-
 #last 5 rows of dataframe
 print(data.tail())
 print("\n")
-
 #info about the data 
 #the dataframe object has a method called info(),the gives you more information about the data set
 print(data.info())
