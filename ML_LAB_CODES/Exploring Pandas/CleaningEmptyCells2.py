@@ -9,6 +9,7 @@ to only replace empty values for one column,specify the column name for the data
 df=pd.read_csv('data1.csv')
 # data["Calories"].fillna(130,inplace=True)
 
+
 #replace using mean,median or mode
 '''
 A common way to replace empty cells , is to calculate the mean, median or mode of the column
