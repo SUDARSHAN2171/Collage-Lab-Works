@@ -5,7 +5,6 @@ count = 1 #iterator
 while count<=10 : #the process is called iteration
     print("Hello World",count)
     count+=1
-    
 print(count)
 
 #print table 
