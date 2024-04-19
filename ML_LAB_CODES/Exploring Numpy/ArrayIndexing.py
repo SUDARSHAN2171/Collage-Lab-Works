@@ -41,7 +41,6 @@ The third number represents the third dimension, which contains three values:
 Since we selected 2, we end up with the third value:
 6
 '''
-
 #negative indexing
 #this is used to access array fromm the end
 
