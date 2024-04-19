@@ -11,7 +11,6 @@ data=pd.read_csv('data1.csv')
 new_data=data.dropna()      #this will not change the original dataframe
 print(new_data.to_string())
 print("\n")
-
 #if we want to change the original dataframe use the 'inplace=True' argument:
 data.dropna(inplace=True)
 print(data.to_string())
