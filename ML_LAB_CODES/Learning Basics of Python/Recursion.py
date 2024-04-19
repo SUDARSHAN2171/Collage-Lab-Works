@@ -6,7 +6,6 @@ def show(n):
     show(n-1)
 show(5) 
 
-
 #factorial
 def factorial(n):
     if(n==0 or n==1):
