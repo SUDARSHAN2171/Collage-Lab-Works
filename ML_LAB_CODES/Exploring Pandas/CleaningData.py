@@ -9,6 +9,7 @@ Bad data could be :
     - wrong data
     - duplicates
 '''
+
 '''
      Duration          Date  Pulse  Maxpulse  Calories
   0         60  '2020/12/01'    110       130     409.1
