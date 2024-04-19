@@ -35,6 +35,7 @@ print(newarray5)
 #flattening the array
 #this means to convert the multidimensional array in 1-D array
 #we can use reshape(-1) ot do this
+
 array6=np.array([[[1,2,3,4],[5,6,7,8]],[[9,10,11,12],[13,14,15,16]]])
 newarray6=array6.reshape(-1)
 print(newarray6)
