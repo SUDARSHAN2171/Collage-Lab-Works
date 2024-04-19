@@ -17,7 +17,6 @@ copyarray1[2]=0
 print("This the copy array after the change is made : ",copyarray1)
 print("This is the original array : ",array1)
 
-
 #view
 #Make a view, change the original array, and display both arrays:
 array2=np.array([1,2,3,4,5])
