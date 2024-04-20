@@ -4,6 +4,7 @@ print(type(tup))
 #tup[0]=43 this is not allowed
 tup1=(1)
 print(type(tup1)) #this is not the correct way to waite tuple
+
 tup2=(1,)
 print(type(tup2)) #this is the correct way to write tuple
 
