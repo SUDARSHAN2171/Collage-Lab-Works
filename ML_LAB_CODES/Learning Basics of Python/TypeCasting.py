@@ -19,7 +19,7 @@ print(a+b)
 # print(a+b)
 #even this also cant run an will goive error  
  
- #now this is how to type cast wwhile taking input
+#now this is how to type cast wwhile taking input
 val = int(input("enter you age"))
 print(type(val),val)
 
