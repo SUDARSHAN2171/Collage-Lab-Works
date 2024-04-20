@@ -7,7 +7,6 @@ if (age1 < 18):
 #elif is only checked if "if Statement is false"
 elif (age1 == 18):          
     print("Under age")
-
 light="Red"
 if(light=="Yellow"):
     print("Get ready")
