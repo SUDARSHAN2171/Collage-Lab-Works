@@ -5,6 +5,7 @@ print(marks)
 print(type(marks))
 print(len(marks))
 marks.append(66)
+
 print(marks)
 marks.append("Sudarshan")
 print(marks)
