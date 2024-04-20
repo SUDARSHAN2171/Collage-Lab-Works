@@ -10,7 +10,6 @@ print(set2)
 print(len(set2)) #even len will ignore dublicates
 
 
-
 info={}
 subj=int(input("Enter Mark for Physics : "))
 info.update({"Physic" : subj})
