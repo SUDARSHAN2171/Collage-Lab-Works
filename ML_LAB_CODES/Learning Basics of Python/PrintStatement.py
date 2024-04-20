@@ -7,6 +7,7 @@ print("Sudarshan",end=" ")
 print("Jadhav") #this will be in same line
 #declearing a variable  
 age = 18
+
 #print the data type
 print(type(age))
 name = 'Sudarshan'
