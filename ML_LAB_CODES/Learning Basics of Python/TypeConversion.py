@@ -3,7 +3,6 @@
 num1 = 2
 num2 = 2.5
 print(num1+num2) #automatic type canvertion is done by the system this is automatic converstion
-
 ''''
 num1="2"
 num2=4
