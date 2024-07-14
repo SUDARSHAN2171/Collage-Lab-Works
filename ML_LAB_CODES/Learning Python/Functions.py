@@ -31,3 +31,36 @@ q=int(input("Enter value for q : "))
 p=int(input("Enter value for p : "))
 r=int(input("Enter value for r : "))
 average(q,p,r)
+
+#function in python
+#built-in function --> print(), len(), type(), range()
+
+
+#default parameter
+
+def greet(name="Sudarshan"): #if while calling the function there is no parameter passed in then the "Sudarshan" will be considered and code will run
+    print("Hello",name)
+greet()
+greet("Suresh")
+
+#WAF to print the length of list
+cities=["Sangli","Miraj","Ichalkaranji","Pune"]
+Hero=["Ironman","Batman","Ben10","Hulk","Thor"]
+def print_c(list):
+    print(len(list))
+
+print_c(cities)
+print_c(Hero)
+
+#write a function for factorial 
+def fact(num):
+    i=1
+    factor=1
+    while i<=num:
+        factor*=i
+        i+=1
+    return factor
+
+s=int(input("Enter the number to remove factorial : "))
+ans=fact(s)
+print("Factorial for ",s," : ",ans)
