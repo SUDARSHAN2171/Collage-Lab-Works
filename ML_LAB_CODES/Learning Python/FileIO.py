@@ -59,3 +59,28 @@ f=open("demo.txt","a")
 f=write("this is a new line")#adds to the file
 
 '''
+
+b=open("ML_LAB_CODES\Learning Python\demo.txt","w")  
+b.write("This statement will be overwritten")         #this will overwrite ont the file 
+b.close()
+
+c=open("ML_LAB_CODES\Learning Python\demo.txt","a")
+c.write("This statement will be added no overwritten")  #this will add the statements at end
+c.close()
+
+#if there is no file which we are trying to write or append then the file will automatical created
+
+
+#if we want to overwrite from the beginning we use r+ mode
+d=open("ML_LAB_CODES\Learning Python\demo.txt","r+")
+d.write("This will be overwritten")
+print(d.read())
+d.close()
+
+
+#when we open a file in w+ mode then first full file will get empty then we can write on it
+
+e=open("ML_LAB_CODES\Learning Python\demo.txt","w+")
+e.write("This will be overwritten")
+print(e.read())
+e.close()
