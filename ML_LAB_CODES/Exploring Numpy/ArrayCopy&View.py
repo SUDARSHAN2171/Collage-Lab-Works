@@ -32,3 +32,14 @@ viewarray3=array3.view()
 viewarray3[3]=0
 print("This is the original array3 : ",array3)
 print("This is the view of the array3 : ",viewarray3)
+
+#to check weather the view don't owns the data and the the copy own the the data there is attribute called as the "base" if the base returns none if the array own the data
+#the base attribute refers to the original attrinbute
+
+#Print the value of the base attribute to check if an array owns it's data or not:
+array4=np.array([1,2,3,4,5])
+copyarray4=array4.copy()
+viewarray4=array4.view()
+print("This will tell weather the copy owns the data : ",copyarray4.base)
+print("This will tell weather the view owns the data : ",viewarray4.base)
+
