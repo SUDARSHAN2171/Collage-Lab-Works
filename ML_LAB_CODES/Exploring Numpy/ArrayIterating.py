@@ -42,6 +42,16 @@ array5=np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 for x in np.nditer(array5):         #that is it skips the loop in loop
     print(x)
 
-#Iterating Array With Different Data Types
-#Iterate through the array as a string:
-
+#enumerated iteration using  ndenumerate()
+#enumeration means mentioning sequence number of somethings one by one 
+#enumerate on the following 1-D array
+array6=np.array([1,2,3,4,5])
+print("this is a example of enumerating : ")
+for idx,x in np.ndenumerate(array6):
+    print(idx,x)
+    
+#enumerate on following 2-D arrays elements
+array7=np.array([[1,2,3,4,5],[6,7,8,9,10]])
+print("this is a example of enumerating in 2-D : ")
+for an,x in np.ndenumerate(array7):
+    print(an,x)
