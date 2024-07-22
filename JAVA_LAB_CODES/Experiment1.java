@@ -1,21 +1,35 @@
+import java.util.Scanner;
+
 public class Experiment1 {
     public static void main(String args[]) {
-        // Ensure the program takes exactly 3 arguments
-        if (args.length != 3) {
-            System.out.println("Please provide the date in the format: dd mm yyyy");
+        Scanner scanner = new Scanner(System.in);
 
-            return;
-        }
+        // Prompt user for input
+        System.out.println("Enter the day (dd): ");
+        int dd = scanner.nextInt();
 
-        int dd = Integer.parseInt(args[0]);
-        int mm = Integer.parseInt(args[1]);
-        int yy = Integer.parseInt(args[2]);
+        System.out.println("Enter the month (mm): ");
+        int mm = scanner.nextInt();
+
+        System.out.println("Enter the year (yyyy): ");
+        int yy = scanner.nextInt();
 
         int m_day[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
         // Check for leap year and adjust February days
         if ((yy % 4 == 0 && yy % 100 != 0) || (yy % 400 == 0)) {
             m_day[2] = 29;
+        }
+
+        // Validate the entered date
+        if (mm < 1 || mm > 12) {
+            System.out.println("Invalid date: Month must be between 1 and 12");
+            return;
+        }
+
+        if (dd < 1 || dd > m_day[mm]) {
+            System.out.println("Invalid date: Day must be between 1 and " + m_day[mm]);
+            return;
         }
 
         // Calculate the number of days passed in the current year
@@ -56,5 +70,7 @@ public class Experiment1 {
                 System.out.println("The day is Saturday");
                 break;
         }
+
+        scanner.close();
     }
 }
