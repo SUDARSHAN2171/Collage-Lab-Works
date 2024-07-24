@@ -1,3 +1,5 @@
+
+// Write a program to find out day of the given date using Command line argument.
 import java.util.Scanner;
 
 public class Experiment1 {
