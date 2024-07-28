@@ -25,20 +25,3 @@ the fillna() method allows us to replace cells with a value
 '''
 #Replace null with 130
 data.fillna(130,inplace=True)
-
-#replace only for specified columns
-'''
-the above function replace all the null values in the dataframe
-to only replace empty values for one column,specify the column name for the dataframe
-'''
-# #replace Null values in calories column with number 130
-# data_new=pd.read_csv('data1.csv')
-# data_new["Calories"].fillna(130,inplace=True)
-
-#replace using mean,median or mode
-'''
-A common way to replace empty cells , is to calculate the mean, median or mode of the column
-pandas uses the mean() median() & mode() method to calculate the respective values for a specified column
-'''
-store=data["Calories"].mean()
-data["Calories"].fillna(store,inplace=True)
