@@ -72,7 +72,7 @@ public class Experiment3 {
         System.out.println("Employee Details:");
         System.out.println("Name: " + emp.getName());
         System.out.println("Age: " + emp.getAge());
-        System.out.println("Salary: $" + emp.getSalary());
+        System.out.println("Salary: " + emp.getSalary());
 
         // Raising salary by 10%
         emp.raiseSalary();
@@ -81,7 +81,7 @@ public class Experiment3 {
         System.out.println("\nName: " + emp.getName());
         System.out.println("Age: " + emp.getAge());
         System.out.println("After 10% raise:");
-        System.out.println("Salary: $" + emp.getSalary());
+        System.out.println("Salary: " + emp.getSalary());
 
         // Closing the scanner
         scanner.close();
