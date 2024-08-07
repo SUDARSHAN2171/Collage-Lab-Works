@@ -1,3 +1,5 @@
+
+//Write a program to develop class employee with constructor to initializeinstance variables. Provide Set method and Get method for instance variables.Also provide a method to raise Salary of each employee by 10%.
 import java.util.Scanner;
 
 public class Experiment3 {
