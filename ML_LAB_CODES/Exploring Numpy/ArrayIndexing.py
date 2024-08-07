@@ -45,6 +45,6 @@ Since we selected 2, we end up with the third value:
 #negative indexing
 #this is used to access array fromm the end
 
-print("this will print the last element of array1 : ",array1[-1])     #this will print the last element of array1
+print("this will print the 2nd last element of array1 : ",array1[-2])     #this will print the last element of array1
 print("this will print the last element of array3 (which is 6) : ",array3[-1,-1])   #this will print the last element of array3 (which is 6)
 
