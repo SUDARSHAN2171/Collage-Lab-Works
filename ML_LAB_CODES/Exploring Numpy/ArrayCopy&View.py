@@ -12,7 +12,7 @@ The view does not own the data and any changes made to the view will affect the 
 #Make a copy, change the original array, and display both arrays:
 array1=np.array([1,2,3,4,5])
 copyarray1=array1.copy()
-print("This is the exact of the original array : ",copyarray1)
+print("This is the exact copy of the original array : ",copyarray1)
 copyarray1[2]=0
 print("This the copy array after the change is made : ",copyarray1)
 print("This is the original array : ",array1)
@@ -34,7 +34,7 @@ print("This is the original array3 : ",array3)
 print("This is the view of the array3 : ",viewarray3)
 
 #to check weather the view don't owns the data and the the copy own the the data there is attribute called as the "base" if the base returns none if the array own the data
-#the base attribute refers to the original attrinbute
+#the base attribute refers to the original attribute
 
 #Print the value of the base attribute to check if an array owns it's data or not:
 array4=np.array([1,2,3,4,5])
