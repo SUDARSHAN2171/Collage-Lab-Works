@@ -27,3 +27,17 @@ x = np.array(["A", "B", "C", "D"])
 y = np.array([3, 8, 1, 10])
 plt.bar(x, y, color = "red")
 plt.show()
+#Color Names
+'''
+You can use any of the 140 supported color names.
+'''
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+plt.bar(x, y, color = "hotpink")
+plt.show()
+
+#color Hex
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+plt.bar(x, y, color = "#4CAF50")
+plt.show()
