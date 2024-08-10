@@ -29,3 +29,25 @@ Style	Or
 'dashdot'	'-.'	
 'None'	'' or ' '	
 '''
+
+#line color
+yaxis=np.array([7,2,9,1,5])
+plt.plot(yaxis,color='r')
+plt.show()
+
+#You can also use Hexadecimal color values:
+plt.plot(yaxis,c='#4CAF50')
+plt.show()
+
+plt.plot(yaxis, c = 'hotpink')
+plt.show()
+
+
+#line width
+'''
+You can use the keyword argument linewidth or the shorter lw to change the width of the line.
+The value is a floating number, in points:
+'''
+
+plt.plot(yaxis, lw = '20.5')
+plt.show()
