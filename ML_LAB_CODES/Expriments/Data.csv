@@ -1,6 +1,11 @@
-Age,income,no. of cards,Loan
-35,35000,3,N
-22,50000,2,Y
-63,200000,1,N
-25,4500,2,Y
-59,17500,1,N
+Country,Age,Salary,Purchased
+India,44,72000,No
+Spain,27,48000,Yes
+Germany,30,54000,No
+Spain,38,61000,No
+Germany,40,,Yes
+India,35,58000,Yes
+Spain,,52000,No
+India,48,79000,Yes
+Germany,50,83000,No
+India,37,67000,Yes
