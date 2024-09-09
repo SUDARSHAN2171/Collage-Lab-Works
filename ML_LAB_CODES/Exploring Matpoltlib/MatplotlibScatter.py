@@ -93,6 +93,7 @@ plt.show()
 '''
 You can combine a colormap with different sizes of the dots. This is best visualized if the dots are transparent:
 '''
+
 x = np.random.randint(100, size=(100))
 y = np.random.randint(100, size=(100))
 colors = np.random.randint(100, size=(100))
