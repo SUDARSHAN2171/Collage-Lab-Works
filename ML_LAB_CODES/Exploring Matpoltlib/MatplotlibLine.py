@@ -51,7 +51,6 @@ The value is a floating number, in points:
 plt.plot(yaxis, lw = '20.5')
 plt.show()
 
-
 #multiple lines 
 '''
 you can plt as many lines as you like by simply adding more plt.plot() function
