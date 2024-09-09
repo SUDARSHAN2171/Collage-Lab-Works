@@ -7,6 +7,7 @@ plt.plot(yaxis,marker='o')
 plt.show()
 plt.plot(yaxis,marker='*')
 plt.show()
+
 '''
 Marker	Description
 'o'	Circle	
