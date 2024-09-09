@@ -38,6 +38,7 @@ plt.ylabel("Calorie Burned",fontdict=font2)
 plt.plot(x,y)
 plt.show()
 #Position the title 
+
 '''
 you can use the loc parameter in title() to position the tile
 legal value are : 'left','right' and 'center'. Default value is 'center'
