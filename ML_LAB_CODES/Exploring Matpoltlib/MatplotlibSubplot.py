@@ -79,6 +79,7 @@ plt.show()
 '''
 You can add a title to each plot with the tilte() function:
 '''
+
 #plot 1:
 x = np.array([0, 1, 2, 3])
 y = np.array([3, 8, 1, 10])
