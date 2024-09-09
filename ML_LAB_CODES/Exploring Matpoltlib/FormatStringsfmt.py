@@ -19,7 +19,6 @@ Line Syntax	Description
 '--'	Dashed line	
 '-.'	Dashed/dotted line
 '''
-
 #Color Reference
 '''
 'r'	Red	
