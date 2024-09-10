@@ -5,6 +5,5 @@ import numpy as np
 
 xaxis=np.array([0,6])
 yaxis=np.array([0,250])
-
 plt.plot(xaxis, yaxis)
 plt.show()
