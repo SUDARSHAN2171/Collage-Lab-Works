@@ -6,7 +6,6 @@ import numpy as np
 #the plot() function is used to draw points(markers) in a diagram
 #by default the plot function draw a line from point to point 
 
-
 #draw a line in a diagram fromm position (1,3) to position (8,10)
 xaxis=np.array([1,8])
 yaxis=np.array([3,10])
