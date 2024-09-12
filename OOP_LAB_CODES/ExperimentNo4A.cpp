@@ -13,6 +13,7 @@ void displayProducts(Product productList[], int n)
     cout << "ID\tName\tPrice\n";
     for (int i = 0; i < n; ++i) 
 	{
+        
         cout << productList[i].productId << "\t" << productList[i].productName << "\t" << productList[i].productPrice << endl;
     }
     cout << endl;
