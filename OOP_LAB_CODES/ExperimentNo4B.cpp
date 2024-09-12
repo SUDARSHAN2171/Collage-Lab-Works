@@ -8,7 +8,7 @@ public:
     string productName;
     string productPrice;
     Node* next;
-    
+
     Node(string id, string name, string price) 
 	{
         productId = id;
@@ -17,7 +17,6 @@ public:
         next = NULL; 
     }
 };
-
 class ProductList {
 private:
     Node* head;
