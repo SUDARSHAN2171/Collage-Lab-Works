@@ -21,6 +21,7 @@ public:
         this->discount = discount;
         this->productprice = price;
     }
+    
     int getProdId() 
 	{ 
 	    return prod_id; 
