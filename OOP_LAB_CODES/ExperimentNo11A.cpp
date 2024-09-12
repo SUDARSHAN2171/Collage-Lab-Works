@@ -8,7 +8,7 @@ void Xtest(int test)
 }
 int main()
 {
-    
+
     cout << "Start\n";
     try
     {
@@ -17,7 +17,6 @@ int main()
         xtest(1);
         xtest(2);
     } 
-    
     catch(int i)
     {
         cout << "Caught an  exception -- value is : ";
