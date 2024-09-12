@@ -88,7 +88,6 @@ class matrix
             }
         }
 };
-
 int main()
 {
     int rows, cols;
