@@ -25,6 +25,5 @@ int main()
         cout<<"Caught an exception trying to divide by zero : ";
         cout << i <<"\n";
     }
-    
     cout<<"End"<<endl<<endl;
 }
