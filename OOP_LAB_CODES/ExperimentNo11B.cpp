@@ -19,11 +19,12 @@ int main()
             cout<<"Division of given numbers : "<<result<<endl; 
         }
     }
-    
+
     catch(int i)
     {
         cout<<"Caught an exception trying to divide by zero : ";
         cout << i <<"\n";
     }
+    
     cout<<"End"<<endl<<endl;
 }
