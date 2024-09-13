@@ -7,7 +7,6 @@ struct Product{
     string productName;
     string productPrice;
 };
-
 void displayProducts(Product productList[], int n) 
 {
     cout << "\nProduct List\n";
