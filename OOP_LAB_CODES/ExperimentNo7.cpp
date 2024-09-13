@@ -28,7 +28,6 @@ void complex :: operator ++()
     ++a;
     ++b;
 }
-
 void complex :: operator ++(int)
 {
 a++; b++;
