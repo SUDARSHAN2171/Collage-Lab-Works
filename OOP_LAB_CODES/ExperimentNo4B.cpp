@@ -8,7 +8,6 @@ public:
     string productName;
     string productPrice;
     Node* next;
-
     Node(string id, string name, string price) 
 	{
         productId = id;
