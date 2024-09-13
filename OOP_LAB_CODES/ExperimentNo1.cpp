@@ -9,7 +9,6 @@ int main()
 	float number, gross_amount, amount_donated, net_sale;
 	cout<<"enter number of tickets : ";
 	cin>>n;
-	
 	for(i=0;i<n;i++)
 	{
 		cout<<"Movie Name......................"<<setw(2);
