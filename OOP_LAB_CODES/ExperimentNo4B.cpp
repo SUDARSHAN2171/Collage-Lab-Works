@@ -21,13 +21,12 @@ public:
 class ProductList {
 private:
     Node* head;
-    
+
 public:
     ProductList() 
 	{
         head = NULL; 
     }
-
     ~ProductList() 
 	{
         Node* current = head;
