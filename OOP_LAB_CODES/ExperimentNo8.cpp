@@ -75,6 +75,7 @@ class matrix
                 cout << endl;
             }
         }
+        
         void inputMatrix()
         {
             cout << "Enter elements of the matrix:" << endl;
