@@ -10,6 +10,7 @@ public:
 	{
         topIndex = -1;
     }
+    
     void push(int val) 
 	{
         data[++topIndex] = val;
