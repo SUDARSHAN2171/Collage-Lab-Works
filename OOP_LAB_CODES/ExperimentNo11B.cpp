@@ -13,7 +13,6 @@ int main()
             throw number2;
             cout<<"This will not execute";
         }
-
         else
         {
             float result = (float)number1/number2;
