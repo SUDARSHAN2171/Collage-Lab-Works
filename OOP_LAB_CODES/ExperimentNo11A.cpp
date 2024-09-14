@@ -6,6 +6,7 @@ void Xtest(int test)
     if(test)
         throw test;
 }
+
 int main()
 {
     cout << "Start\n";
