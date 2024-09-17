@@ -1,5 +1,3 @@
-
-//Write a program to implement matrix operations
 import java.util.Scanner;
 
 public class Experiment2 {
@@ -8,7 +6,7 @@ public class Experiment2 {
         Scanner scanner = new Scanner(System.in);
 
         // Input dimensions for the matrices
-        System.out.println("Enter the number of rows and columns for the matrices:");
+        System.out.println("Enter the number of rows and columns for the matrices");
         int rows = scanner.nextInt();
         int cols = scanner.nextInt();
 
@@ -30,7 +28,6 @@ public class Experiment2 {
                 matrix2[i][j] = scanner.nextInt();
             }
         }
-
         // Perform matrix operations
         int[][] additionResult = addMatrices(matrix1, matrix2);
         int[][] subtractionResult = subtractMatrices(matrix1, matrix2);
@@ -50,6 +47,7 @@ public class Experiment2 {
 
     public static int[][] addMatrices(int[][] mat1, int[][] mat2) {
         int rows = mat1.length;
+
         int cols = mat1[0].length;
         int[][] result = new int[rows][cols];
 
@@ -72,7 +70,6 @@ public class Experiment2 {
                 result[i][j] = mat1[i][j] - mat2[i][j];
             }
         }
-
         return result;
     }
 
@@ -86,7 +83,6 @@ public class Experiment2 {
                 }
             }
         }
-
         return result;
     }
 
