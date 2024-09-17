@@ -1,91 +1,59 @@
+import java.util.*;
 
-//Write a program to develop class employee with constructor to initializeinstance variables. Provide Set method and Get method for instance variables.Also provide a method to raise Salary of each employee by 10%.
-import java.util.Scanner;
+class EmployeeInfo {
+    public int emp_id;
+    public String emp_name;
+    public String emp_address;
+    public int emp_salary;
 
-public class Experiment3 {
-    // Inner class representing an Employee
-    public static class Employee {
-        // Instance variables
-        private String name;
-        private int age;
-        private double salary;
+    public void setdata(int emp_id, String emp_name, String emp_address, int emp_salary) {
+        this.emp_id = emp_id;
+        this.emp_name = emp_name;
+        this.emp_address = emp_address;
+        this.emp_salary = emp_salary;
 
-        // Constructor to initialize instance variables
-        public Employee(String name, int age, double salary) {
-            this.name = name;
-            this.age = age;
-            this.salary = salary;
-        }
-
-        // Getter method for name
-        public String getName() {
-            return name;
-        }
-
-        // Setter method for name
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        // Getter method for age
-        public int getAge() {
-            return age;
-        }
-
-        // Setter method for age
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        // Getter method for salary
-        public double getSalary() {
-            return salary;
-        }
-
-        // Setter method for salary
-        public void setSalary(double salary) {
-            this.salary = salary;
-        }
-
-        // Method to raise the salary by 10%
-        public void raiseSalary() {
-            this.salary += this.salary * 0.10;
-        }
     }
 
-    // Main method to test the Employee class
+    public void getdata() {
+        System.out.println("Employee ID :" + emp_id);
+        System.out.println("Employee name :" + emp_name);
+        System.out.println("Employee address : " + emp_address);
+        System.out.println("Employee salary :" + emp_salary);
+
+    }
+
+}
+
+class Experiment3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        EmployeeInfo ab = new EmployeeInfo();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter employee ID : ");
+        int a = sc.nextInt();
+        switch (a) {
+            case 101:
+                ab.setdata(101, "Sakshi", "Ichalkaranji", 10000);
+                ab.getdata();
+                break;
+            case 102:
+                ab.setdata(102, "Anu", "Kolhapur", 8000);
+                ab.getdata();
+                break;
+            case 103:
+                ab.setdata(103, "Aradhya", "Mumbai", 7000);
+                ab.getdata();
+                break;
+            case 104:
+                ab.setdata(104, "vamika", "Noida", 6000);
+                ab.getdata();
+                break;
+            case 105:
+                ab.setdata(105, "Sami", "Pune", 9000);
+                ab.getdata();
+                break;
+            default:
+                System.out.print("Inavalid Choice");
 
-        // Prompting user for input
-        System.out.println("Enter the employee's name:");
-        String name = scanner.nextLine();
-
-        System.out.println("Enter the employee's age:");
-        int age = scanner.nextInt();
-
-        System.out.println("Enter the employee's salary:");
-        double salary = scanner.nextDouble();
-
-        // Creating an Employee object with user input
-        Employee emp = new Employee(name, age, salary);
-
-        // Displaying initial details
-        System.out.println("Employee Details:");
-        System.out.println("Name: " + emp.getName());
-        System.out.println("Age: " + emp.getAge());
-        System.out.println("Salary: " + emp.getSalary());
-
-        // Raising salary by 10%
-        emp.raiseSalary();
-
-        // Displaying updated details
-        System.out.println("\nName: " + emp.getName());
-        System.out.println("Age: " + emp.getAge());
-        System.out.println("After 10% raise:");
-        System.out.println("Salary: " + emp.getSalary());
-
-        // Closing the scanner
-        scanner.close();
+        }
     }
 }
