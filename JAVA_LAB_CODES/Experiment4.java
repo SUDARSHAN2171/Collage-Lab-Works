@@ -1,5 +1,3 @@
-
-//Create a class Savings Account. Demonstrate the static variable and static method for calculation of monthly interest and modification of interest rate.
 import java.util.Scanner;
 
 public class Experiment4 {
