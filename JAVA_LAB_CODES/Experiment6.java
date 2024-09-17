@@ -1,182 +1,193 @@
-
-// Experiment6.java
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-// Stack Interface
-interface StackInterface<T> {
-    void push(T element);
+// Define the StackInterface
+interface Stack {
+    void push(int value);
 
-    T pop();
+    int pop();
 
-    T peek();
-
-    boolean isEmpty();
+    void displayStack();
 }
 
-// Queue Interface
-interface QueueInterface<T> {
-    void enqueue(T element);
+// Define the QueueInterface
+interface Queue {
+    void enqueue(int value);
 
-    T dequeue();
+    int dequeue();
 
-    T front();
-
-    boolean isEmpty();
+    void displayQueue();
 }
 
-// Class implementing both Stack and Queue interfaces
-class DataStructure<T> implements StackInterface<T>, QueueInterface<T> {
-    private LinkedList<T> list = new LinkedList<>();
+// Implement both interfaces in the StackQueue class
+class StackQueue implements Stack, Queue {
+    private static final int MAX_SIZE = 100;
+    private int[] stack;
+    private int top;
+    private int front, rear, size;
+    private int[] queue;
 
-    // Stack operations
-    @Override
-    public void push(T element) {
-        list.addFirst(element);
+    public StackQueue() {
+        stack = new int[MAX_SIZE];
+        top = -1;
+        queue = new int[MAX_SIZE];
+        front = 0;
+        rear = -1;
+        size = 0;
     }
 
-    @Override
-    public T pop() {
-        if (list.isEmpty()) {
-            throw new NoSuchElementException("Stack is empty");
+    // Stack Methods
+
+    public void push(int value) {
+        if (top >= MAX_SIZE - 1) {
+            System.out.println("Stack overflow");
+        } else {
+            stack[++top] = value;
+            System.out.println("Pushed " + value + " to stack");
         }
-        return list.removeFirst();
     }
 
-    @Override
-    public T peek() {
-        if (list.isEmpty()) {
-            throw new NoSuchElementException("Stack is empty");
+    public int pop() {
+        if (top < 0) {
+            System.out.println("Stack underflow !!");
+            return -1;
+        } else {
+            return stack[top--];
         }
-        return list.getFirst();
     }
 
-    @Override
-    public boolean isEmpty() {
-        return list.isEmpty();
-    }
-
-    // Queue operations
-    @Override
-    public void enqueue(T element) {
-        list.addLast(element);
-    }
-
-    @Override
-    public T dequeue() {
-        if (list.isEmpty()) {
-            throw new NoSuchElementException("Queue is empty");
+    public void displayStack() {
+        if (top < 0) {
+            System.out.println("Stack is empty !!");
+        } else {
+            System.out.print("Stack: ");
+            for (int i = 0; i <= top; i++) {
+                System.out.print(stack[i] + " ");
+            }
+            System.out.println();
         }
-        return list.removeFirst();
     }
 
-    @Override
-    public T front() {
-        if (list.isEmpty()) {
-            throw new NoSuchElementException("Queue is empty");
+    // Queue Methods
+
+    public void enqueue(int value) {
+        if (size == MAX_SIZE) {
+            System.out.println("Queue overflow !!");
+        } else {
+            rear = (rear + 1) % MAX_SIZE;
+            queue[rear] = value;
+            size++;
+            System.out.println("Enqueued " + value + " to queue");
         }
-        return list.getFirst();
+    }
+
+    public int dequeue() {
+        if (size == 0) {
+            System.out.println("Queue underflow !!");
+            return -1;
+        } else {
+            int value = queue[front];
+            front = (front + 1) % MAX_SIZE;
+            size--;
+            return value;
+        }
+    }
+
+    public void displayQueue() {
+        if (size == 0) {
+            System.out.println("Queue is empty !!");
+        } else {
+            System.out.print("Queue: ");
+            for (int i = 0; i < size; i++) {
+                System.out.print(queue[(front + i) % MAX_SIZE] + " ");
+            }
+            System.out.println();
+        }
     }
 }
 
+// Test class with the main method
 public class Experiment6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        DataStructure<Integer> dataStructure = new DataStructure<>();
+        StackQueue sq = new StackQueue();
+        int choice, value;
 
-        System.out.println("Choose an operation:");
-        System.out.println("1. Stack Operations");
-        System.out.println("2. Queue Operations");
-        int choice = scanner.nextInt();
+        do {
+            System.out.println("Choose an operation:");
+            System.out.println("1. Stack Operations");
+            System.out.println("2. Queue Operations");
+            System.out.println("3. Exit");
+            choice = scanner.nextInt();
 
-        if (choice == 1) {
-            System.out.println("Stack Operations:");
-            while (true) {
-                System.out.println("1. Push");
-                System.out.println("2. Pop");
-                System.out.println("3. Peek");
-                System.out.println("4. Check if Empty");
-                System.out.println("5. Exit");
-                int operation = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    int stackChoice;
+                    do {
+                        System.out.println("Stack Operations:");
+                        System.out.println("1. Push to Stack");
+                        System.out.println("2. Pop from Stack");
+                        System.out.println("3. Display Stack");
+                        System.out.println("4. Go Back");
+                        stackChoice = scanner.nextInt();
 
-                switch (operation) {
-                    case 1:
-                        System.out.println("Enter element to push:");
-                        int element = scanner.nextInt();
-                        dataStructure.push(element);
-                        break;
-                    case 2:
-                        try {
-                            int poppedElement = dataStructure.pop();
-                            System.out.println("Popped element: " + poppedElement);
-                        } catch (NoSuchElementException e) {
-                            System.out.println(e.getMessage());
+                        switch (stackChoice) {
+                            case 1:
+                                System.out.print("Enter value to push: ");
+                                value = scanner.nextInt();
+                                sq.push(value);
+                                break;
+                            case 2:
+                                System.out.println("Popped from stack: " + sq.pop());
+                                break;
+                            case 3:
+                                sq.displayStack();
+                                break;
+                            case 4:
+                                break;
+                            default:
+                                System.out.println("Invalid choice");
                         }
-                        break;
-                    case 3:
-                        try {
-                            int topElement = dataStructure.peek();
-                            System.out.println("Top element: " + topElement);
-                        } catch (NoSuchElementException e) {
-                            System.out.println(e.getMessage());
+                    } while (stackChoice != 4);
+                    break;
+
+                case 2:
+                    int queueChoice;
+                    do {
+                        System.out.println("Queue Operations:");
+                        System.out.println("1. Enqueue to Queue");
+                        System.out.println("2. Dequeue from Queue");
+                        System.out.println("3. Display Queue");
+                        System.out.println("4. Go Back");
+                        queueChoice = scanner.nextInt();
+
+                        switch (queueChoice) {
+                            case 1:
+                                System.out.print("Enter value to enqueue: ");
+                                value = scanner.nextInt();
+                                sq.enqueue(value);
+                                break;
+                            case 2:
+                                System.out.println("Dequeued from queue: " + sq.dequeue());
+                                break;
+                            case 3:
+                                sq.displayQueue();
+                                break;
+                            case 4:
+                                break;
+                            default:
+                                System.out.println("Invalid choice");
                         }
-                        break;
-                    case 4:
-                        System.out.println("Is stack empty? " + dataStructure.isEmpty());
-                        break;
-                    case 5:
-                        System.out.println("Exiting Stack Operations.");
-                        return;
-                    default:
-                        System.out.println("Invalid option. Please try again.");
-                }
+                    } while (queueChoice != 4);
+                    break;
+
+                case 3:
+                    System.out.println("Exiting...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
             }
-        } else if (choice == 2) {
-            System.out.println("Queue Operations:");
-            while (true) {
-                System.out.println("1. Enqueue");
-                System.out.println("2. Dequeue");
-                System.out.println("3. Front");
-                System.out.println("4. Check if Empty");
-                System.out.println("5. Exit");
-                int operation = scanner.nextInt();
-
-                switch (operation) {
-                    case 1:
-                        System.out.println("Enter element to enqueue:");
-                        int element = scanner.nextInt();
-                        dataStructure.enqueue(element);
-                        break;
-                    case 2:
-                        try {
-                            int dequeuedElement = dataStructure.dequeue();
-                            System.out.println("Dequeued element: " + dequeuedElement);
-                        } catch (NoSuchElementException e) {
-                            System.out.println(e.getMessage());
-                        }
-                        break;
-                    case 3:
-                        try {
-                            int frontElement = dataStructure.front();
-                            System.out.println("Front element: " + frontElement);
-                        } catch (NoSuchElementException e) {
-                            System.out.println(e.getMessage());
-                        }
-                        break;
-                    case 4:
-                        System.out.println("Is queue empty? " + dataStructure.isEmpty());
-                        break;
-                    case 5:
-                        System.out.println("Exiting Queue Operations.");
-                        return;
-                    default:
-                        System.out.println("Invalid option. Please try again.");
-                }
-            }
-        } else {
-            System.out.println("Invalid choice. Exiting program.");
-        }
+        } while (choice != 3);
 
         scanner.close();
     }
