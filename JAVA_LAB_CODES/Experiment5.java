@@ -1,89 +1,97 @@
+import java.time.LocalDate;
+import java.time.Period;
 
-// Experiment5.java
-import java.util.Scanner;
+class Person 
+{
+String name;
+LocalDate birthdate;
+double height;
+double weight;
+String address;
 
-// Base class
-class Person {
-    private String name;
-    private int age;
-
-    // Constructor
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    // Getters
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    // Method to display person details
-    public void displayPersonInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-    }
+public Person(String name, LocalDate birthdate,double height, double weight ,String address)
+{
+    this.name=name;
+    this.birthdate=birthdate;
+    this.height=height;
+    this.weight=weight;
+    this.address=address;
+}
+public int CalculateAge()
+{
+    LocalDate today = LocalDate.now();
+    return Period.between(birthdate,today).getYears();
+}
 }
 
-// Derived class
-class Student extends Person {
-    private String rollNumber;
-    private String course;
+class Student extends Person
+{
+    int rollno;
+    double[] marks;
 
-    // Constructor
-    public Student(String name, int age, String rollNumber, String course) {
-        super(name, age);
-        this.rollNumber = rollNumber;
-        this.course = course;
+public Student(String name, LocalDate birthdate,double height, double weight ,String address,int rollno,double[] marks)
+{
+    super(name,birthdate,height,weight,address);
+    this.rollno=rollno;
+    this.marks=marks;
+}
+public double CalculateAvg()
+{
+    double sum=0;
+    for(double mark:marks)
+    {
+        sum+=mark;
     }
-
-    // Getters
-    public String getRollNumber() {
-        return rollNumber;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    // Method to display student details
-    public void displayStudentInfo() {
-        // Display person info using parent class method
-        displayPersonInfo();
-        System.out.println("Roll Number: " + rollNumber);
-        System.out.println("Course: " + course);
-    }
+    return sum/marks.length;
+   
+}
 }
 
-// Main class
-public class Experiment5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+class Employee extends Person
+{
+    int empid;
+    double salary;
+    double homeloanInterest;
+    double LIC;
+    double Insurance;
+    double TotalSalary;
+  
+public Employee(String name, LocalDate birthdate,double height, double weight ,String address,int empid, double salary, double homeloanInterest, double LIC,double Insurance )
+{
+    super(name,birthdate,height,weight,address);
+    this.empid=empid;
+    this.salary=salary;
+    this.LIC =LIC;
+    this.Insurance=Insurance;
+    TotalSalary =salary*12;
+}
 
-        // Input for Person
-        System.out.println("Enter name:");
-        String name = scanner.nextLine();
-        System.out.println("Enter age:");
-        int age = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+public double CalculateTax()
+{
+    //assume tax is 5% of the salary
+    
+    double taxableSalary = TotalSalary -(homeloanInterest+LIC + Insurance);
+    return taxableSalary*0.05;
 
-        // Input for Student
-        System.out.println("Enter roll number:");
-        String rollNumber = scanner.nextLine();
-        System.out.println("Enter course:");
-        String course = scanner.nextLine();
+}
+}
 
-        // Create Student object
-        Student student = new Student(name, age, rollNumber, course);
 
-        // Display Student info
-        System.out.println("\nStudent Information:");
-        student.displayStudentInfo();
+public class Experiment5
+{
+    public static void main(String[] args)
+    {
+        Student student = new Student("sakshi", LocalDate.of(2005,1,1), 155, 45,"Ichalkaranji", 11, new double[]{91,90,89,95,88});
+        System.out.println("The student name is "+student.name);
+        System.out.println("The age of student is "+student.CalculateAge());
+        System.out.println("The Averge marks of students are "+student.CalculateAvg());
+        
+        Employee employee = new Employee("Sneha",LocalDate.of(2004,3,31),156, 40, "Ich", 19, 50000,50000,10000,40000);
+        System.out.println("Employee name is "+ employee.name);
+        System.out.println("Emplyee age is "+employee.CalculateAge());
+        System.out.println("Employee's monthly salary is "+employee.salary);
+        System.out.println("Employee's annual salary is "+employee.TotalSalary);
+        System.out.println("Employee's Total yearly tax is "+employee.CalculateTax());
 
-        scanner.close();
     }
 }
