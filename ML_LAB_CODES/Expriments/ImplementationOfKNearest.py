@@ -1,41 +1,61 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from sklearn.neighbors import KNeighborsClassifier, NearestNeighbors
-from sklearn.model_selection import train_test_split
+import math
 
-df = pd.read_csv('CC DataSet.csv')
+df=pd.read_csv('Data.csv')
+print(df)
+age=df["Age"].tolist()
+age=[int(i) for i in age]
+inc=df["income"].tolist()
+inc=[int(i) for i in inc]
+cards=df["no. of cards"].tolist()
+cards=[int(i) for i in cards]
+loan=df["Loan"].tolist()
+nage=int(input("Enter Age : "))
+ninc=int(input("Enter Income : "))
+nc=int(input("Enter number of cards : "))
+ec=[]
+sa=[] 
+si=[]
+sc=[]
+for i in range(len(age)):
+    n=age[i]-nage
+    n=n*n
+    sa.append(n)
+    n=inc[i]-ninc
+    n=n*n
+    si.append(n)
+    n=cards[i]-nc
+    n=n*n
+    sc.append(n)
+    n=math.sqrt(sa[i]+si[i]+sc[i])
+    ec.append(n)
 
-le = LabelEncoder()
-df['Loan'] = le.fit_transform(df['Loan'])
-
-X = df[['Age', '#CC', 'Income']]
-y = df['Loan']
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-knn = KNeighborsClassifier(n_neighbors=5)
-knn.fit(X_train, y_train)
-
-nn = NearestNeighbors(n_neighbors=2)
-nn.fit(X_train)
-
-def predict_loan(age, num_cc, income):
-    input_data = pd.DataFrame([[age, num_cc, income]], columns=['Age', '#CC', 'Income'])
-    prediction = knn.predict(input_data)
-    distances, indices = nn.kneighbors(input_data)
-    nearest_neighbors = X_train.iloc[indices[0]]
-    if age > 25 and num_cc > 0 and income < 20000:
-        return f'Y' if prediction[0] == 1 else 'N', nearest_neighbors
+print(ec)
+df['Eucledian dis']=ec
+print(df)
+df=df.sort_values('Eucledian dis')
+print(df)
+k=0
+while(k%2==0):
+ k=int(input("Enter odd value of k :"))
+ if(k%2==0):
+     print("Even k Enter again ")
+loan=df["Loan"].tolist()
+l=[]
+for i in range(k):
+    l.append(loan[i])
+print("3 nearest values : ",l)
+c1=0
+c2=0;
+for i in range(k):
+    if(l[i]=='N'):
+        c1=c1+1
     else:
-        return 'N', None
-
-age = int(input("Enter the age: "))
-num_cc = int(input("Enter the number of credit cards: "))
-income = int(input("Enter the income: "))
-
-result, nearest_neighbors = predict_loan(age, num_cc, income)
-print(f'Prediction: {result}')
-if nearest_neighbors is not None:
-    print('2 Nearest Neighbors:')
-    print(nearest_neighbors)
+        c2=c2+1
+if c1>c2:
+    nloan='N'
+    print("Loan : "+nloan)
+else:
+    nloan='Y'
+    print("Loan : "+nloan) 
