@@ -37,7 +37,6 @@ public class Experiment13 extends JFrame implements ActionListener {
         fileMenu.add(saveAsMenuItem);
         fileMenu.addSeparator();
         fileMenu.add(exitMenuItem);
-
         menuBar.add(fileMenu);
         setJMenuBar(menuBar);
 
