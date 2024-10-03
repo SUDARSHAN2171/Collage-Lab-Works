@@ -27,7 +27,6 @@ plt.ylabel("Calorie Burned")
 plt.plot(x, y)
 plt.grid(axis = 'x')
 plt.show()
-
 #Set line properties for the grid
 '''
 you can also set the line properties of the grid, like this: grid (color='color',linestyle = 'linestyle',linewidth=number)
