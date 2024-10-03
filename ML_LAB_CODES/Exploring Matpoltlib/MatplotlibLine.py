@@ -61,7 +61,6 @@ plt.plot(yaxis1)
 plt.plot(yaxis2)
 plt.show()
 
-
 '''
 You can also plot many lines by adding the points for the x- and y-axis for each line in the same plt.plot() function.
 
