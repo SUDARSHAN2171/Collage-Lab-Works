@@ -6,6 +6,7 @@ yaxis=np.array([3,7,1,6])
 plt.plot(yaxis,marker='o')
 plt.show()
 plt.plot(yaxis,marker='*')
+
 plt.show()
 '''
 Marker	Description
