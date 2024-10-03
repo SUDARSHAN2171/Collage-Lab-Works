@@ -52,6 +52,7 @@ for i in range(k):
 print("3 nearest values : ",l)
 c1=0
 c2=0;
+
 for i in range(k):
     if(l[i]=='N'):
         c1=c1+1
