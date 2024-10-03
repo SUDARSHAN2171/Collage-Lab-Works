@@ -19,7 +19,6 @@ def get_silver_price_from_api(api_key, date):
     else:
         print(f"No price data available for {date}.")
         return None
-
 def create_silver_price_dataframe():
     api_key = input("Enter your Alpha Vantage API key: ")
 
