@@ -22,7 +22,6 @@ plt.show()
 
 plt.plot(yaxis,marker='o',ms=20,mfc='r')
 plt.show()
-
 #Use both the mec and mfc arguments to color the entire marker:
 #Example : Set the color of both the edge and the face to red:
 plt.plot(yaxis, marker = 'o', ms = 20, mec = 'r', mfc = 'r')
