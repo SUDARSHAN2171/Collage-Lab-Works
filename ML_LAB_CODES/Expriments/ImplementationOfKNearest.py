@@ -30,7 +30,6 @@ for i in range(len(age)):
     sc.append(n)
     n=math.sqrt(sa[i]+si[i]+sc[i])
     ec.append(n)
-
 print(ec)
 df['Eucledian dis']=ec
 print(df)
