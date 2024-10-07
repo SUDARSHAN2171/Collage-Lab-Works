@@ -48,8 +48,7 @@ void jobSequencing(Job arr[], int n) {
                 break;
             }
         }
-    }
-    
+    }   
     printf("The sequence of jobs with maximum profit is: ");
     for(i = 0; i < max_deadline; i++) {
         if(result[i] != -1) {
