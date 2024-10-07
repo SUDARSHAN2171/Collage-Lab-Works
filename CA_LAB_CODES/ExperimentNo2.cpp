@@ -40,7 +40,6 @@ void maxmin(int i, int j)
         
     }  
 }  
-  
 int main()   
 {  
     int i, num;
