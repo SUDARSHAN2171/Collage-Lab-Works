@@ -16,7 +16,6 @@ int main()
     for(i=0;i<10000;i++)
     {
     }
-    
     low=0;high=n-1;
     mid=(low+high)/2;
     while(low<=high)
