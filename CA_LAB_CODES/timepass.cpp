@@ -10,6 +10,7 @@ class base
     int getdata1();
     int getdata2();
 };
+
 void base :: setdata(void)
 {
     num1 = 10;
