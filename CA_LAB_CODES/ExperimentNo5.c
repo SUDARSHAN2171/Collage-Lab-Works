@@ -23,7 +23,6 @@ void simple_fill() {
             if ((used[i] == 0) &&
                 ((maxi == -1) || ((float)v[i]/c[i] > (float)v[maxi]/c[maxi])))
                 maxi = i;
- 
         used[maxi] = 1; /* mark the maxi-th object as used */
         cur_w -= c[maxi]; /* with the object in the bag, I can carry less */
         tot_v += v[maxi];
