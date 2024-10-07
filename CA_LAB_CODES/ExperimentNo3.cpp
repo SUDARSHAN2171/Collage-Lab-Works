@@ -9,8 +9,7 @@ void merge(int arr[],int left,int mid,int right)
     L[i]=arr[left+i];
     for(j=0;j<n2;j++)
     R[j]=arr[mid+1+j];
-    i=0; j=0; k=left;  
-    
+    i=0; j=0; k=left;    
     while(i<n1 && j<n2)  
     {  
         if(L[i]<=R[j])  
