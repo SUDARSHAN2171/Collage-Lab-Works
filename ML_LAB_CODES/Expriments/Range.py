@@ -8,7 +8,6 @@ def get_silver_price_from_api(api_key, date):
     response = requests.get(url)
     
     print(f"API Response for {date}: {response.json()}")
-
     data = response.json()
 
     time_series = data.get('Time Series (Daily)', {})
