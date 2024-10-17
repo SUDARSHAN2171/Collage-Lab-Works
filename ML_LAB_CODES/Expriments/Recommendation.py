@@ -14,7 +14,6 @@ df = pd.DataFrame(data, index=['Item1', 'Item2', 'Item3', 'Item4', 'Item5'])
 print("User-Item Matrix:")
 print(df)
 
-
 similarity_matrix = cosine_similarity(df.T)
 print("\n\n")
 print(similarity_matrix)
